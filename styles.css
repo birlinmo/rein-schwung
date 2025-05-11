@@ -294,3 +294,29 @@ footer {
     margin-right: 0;
   }
 }
+.developer-name {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.developer-name:hover {
+  color: white; /* يبقى أبيض حتى عند التحويم */
+}
+
+.developer-name::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: white; /* خط تحته أبيض */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.developer-name:hover::after {
+  transform: scaleX(1);
+}
